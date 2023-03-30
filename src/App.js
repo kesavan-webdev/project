@@ -19,9 +19,14 @@ const App = () => {
     setInitialProducts(copyingProducts);
   };
 
-  const filter = ()=>{
-    initialProducts.filter(())
-  }
+  const filter = (e, search) => {
+    e.preventDefault();
+    const copyProducts = [...initialProducts];
+
+    const filterProducts = copyProducts.filter((product) => {
+      product.category.toLowerCase().includes(search);
+    });
+  };
 
   return (
     <div className="container">

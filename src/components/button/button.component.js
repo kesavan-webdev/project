@@ -2,10 +2,6 @@ import { useState } from "react";
 const FilterContainer = ({ sortProducts }) => {
   const [inputValue, setInputValue] = useState("");
 
-  const filter = (e) => {
-    e.preventDefault();
-  };
-
   return (
     <section className="search-bar">
       <form className="Search-filter" onSubmit={filter}>

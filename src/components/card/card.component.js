@@ -5,7 +5,7 @@ const Card = ({ data }) => {
   // console.log(copyProducts);
   const products = data.map((val) => {
     return (
-      <article className="card-container">
+      <article className="card-container" key={val.id}>
         <figure className="product-img-container">
           <img
             className="product-img"
